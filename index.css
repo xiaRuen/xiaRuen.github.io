@@ -1,0 +1,146 @@
+@font-face {
+    font-family: yzwy;
+    src: url(Fonts/yzwy.ttf);
+}
+
+* {
+    font-family: yzwy;
+    box-sizing: border-box;
+
+}
+
+#myVideo {
+    height: 100%;
+    width: 177.77777778vh;
+    /* 100 * 16 / 9 */
+    min-width: 100%;
+    min-height: 56.25vw;
+    /* 100 * 9 / 16 */
+    position: fixed;
+    z-index: -1;
+}
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+iframe {
+    position: relative;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.none {
+    height: 0;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Static Background
+body>div {
+    background-color: rgb(199, 215, 215);
+    background-image: url(Illustrations/Keqing.jpg);
+    background-size: cover;
+    background-position-x: 60%;
+    overflow: hidden;
+}
+*/
+
+/* specific declerations specific declerations specific declerations specific declerations specific declerations */
+.fullscreen>div {
+    position: absolute;
+    z-index: 2;
+}
+
+/* menu bar menu bar menu bar */
+#menu_wrapper {
+    margin-left: 12%;
+    width: 18%;
+    height: 100%;
+}
+
+#menu_bar {
+    height: 80%;
+    width: 100%;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .6), rgba(0, 0, 0, .2) 95%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 80%, rgba(0, 0, 0, 0));
+    border-left: 2px solid black;
+    display: block;
+    padding: 10%;
+    --nav-color: rgba(255, 255, 255, 0.8);
+    color: var(--nav-color);
+}
+
+#nav_bar {
+    padding: 2%;
+    margin-top: 5%;
+}
+
+.selected {
+    background-color: rgba(0, 0, 0, .06);
+    ;
+}
+
+.navigators {
+    font-size: 1.5vh;
+    padding: 5%;
+    width: 80%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navigators:hover {
+    cursor: e-resize;
+    background-color: rgba(0, 0, 0, .1);
+}
+
+/* footer footer footer footer */
+#footer_wrapper {
+    margin-left: 50%;
+    top: 85%;
+    width: 40%;
+    height: 15%;
+}
+
+footer {
+    border-top: 2px solid rgba(0, 0, 0, .3);
+    padding: 2%;
+    padding-left: 5%;
+    color: rgba(255, 255, 255, 0.5);
+    height: 100%;
+}
+
+/* main main main main main main main */
+#main {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    --window-mask: linear-gradient(to right, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0));
+    -webkit-mask-image: var(--window-mask);
+    mask-image: var(--window-mask);
+
+}
+
+.windows {
+    float: right;
+    height: 100%;
+    width: 100vw;
+    padding: 6vh 5vw 35vh 40vw;
+    position: absolute;
+}
