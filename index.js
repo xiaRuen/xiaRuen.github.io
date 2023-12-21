@@ -62,17 +62,6 @@ function set_margin() {
     nw.setAttribute("style", "margin-left: " + margin_left + "vw; width: " + width + "px");
 }
 
-function post_request() {
-    let data = { element: "barium" };
-    fetch("./server.py", {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-    }).then(res => {
-        console.log("Request complete! response:", res);
-    });
-}
-
 function pause_or_play_background_video() {
     var video = document.getElementById("myVideo");
     if (video.paused) {
