@@ -10,17 +10,18 @@
     <link rel="apple-touch-icon" href="favicon_io/apple-touch-icon.png">
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="animation.css">
-    <link rel="stylesheet" href="YTPlayer.css">
+    <link rel="stylesheet" href="YTPlayer/YTPlayer.css">
     <link rel="stylesheet" href="Font_Awesome_Pro.css">
+    <link rel="stylesheet" href="general.css">
     <script src="index.js"></script>
-    <script src="YTPlayer.js"></script>
+    <script src="YTPlayer/YTPlayer.js"></script>
     <script src="https://www.youtube.com/iframe_api"></script>
-    
+
 </head>
 
 <body>
     <video autoplay muted loop id="myVideo">
-        <source src="Video Backgrounds/keqing-genshin-impact-moewalls.com.mp4" type="video/mp4">
+        <source src="Media/keqing-genshin-impact-moewalls.com.mp4" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>
     <div class="sakura">
@@ -35,31 +36,40 @@
         <span></span><span></span><span></span><span></span><span></span>
         <span></span><span></span><span></span><span></span><span></span>
     </div>
-    <div class="fullscreen">
-        <div id="menu_wrapper">
-            <div id="menu_bar">
+    <div id="main_grid">
+        <menu>
+            <div>
                 <div style="width: 100%; height: max-content; display: flex;">
                     <div style="width: 70px; float: left; padding-left: 5%; font-size: 1.5vw; margin-right: 2vw;">
                         <h1>幻<Br>&nbsp;&nbsp;梦</h1>
                     </div>
-                    <div style="width: 60px; float: left;">
+                    <div style="float: left;">
                         <h5
                             style="border-left: 1px solid black; padding: 1em; margin-top: 50%; font-size: 1vw; line-height: 100%;">
-                            Personal Portfolio</h5>
+                            Personal<Br>Portfolio
+                        </h5>
                     </div>
                 </div>
                 <div style="border-bottom: 1px solid var(--nav-color)" name="Horizontal Line"></div>
-                <div id="nav_bar">
+                <nav>
                     <div class="navigators selected">Home</div>
                     <div class="navigators">About</div>
                     <div class="navigators">Programming</div>
                     <div class="navigators">Modeling</div>
                     <div class="navigators">Credits</div>
-                </div>
+                </nav>
             </div>
-        </div>
-        <div id="footer_wrapper">
-            <footer>
+        </menu>
+        <main>
+            <div class="windows">
+                <iframe class="unselectable" src="Pages/Home/page.html"></iframe>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <div id="player_wrapper">
+                    <div id="player"></div>
+                </div>
                 <div id="audio-box">
                     <div id="audio-controls">
                         <span id="volume" class="fas fa-volume-slash bounce"></span>
@@ -68,25 +78,19 @@
                         <span id="ff" class="fas fa-forward"></span>
                         <span id="time-played"></span>
                         <span id="song-name"></span>
-                    </div> 
+                    </div>
+                    <div style="flex: 0.5"></div>
                     <div id="progress">
                         <div id="audio-progress-dragger" class="unselectable">
-                            <img src="Kawaii Art.gif">
+                            <img src="/Media/Kawaii Art.gif">
                         </div>
-                        
+
                     </div>
-                    
+
                 </div>
-                <div id="player_wrapper">
-                    <div id="player"></div>
-                </div>
-            </footer>
-        </div>
-    </div>
-    <div id="main">
-        <div class="windows">
-            <iframe class="unselectable" src="Home/index.html"></iframe>
-        </div>
+            </div>
+
+        </footer>
     </div>
 
 </body>

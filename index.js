@@ -1,24 +1,23 @@
 window.addEventListener('load', () => {
-    let navigators = Array.from(document.getElementById('nav_bar').children);
+    let navigators = document.querySelectorAll(".navigators");
     navigators.forEach((e) => {
         e.addEventListener('click', () => {
-            navigators.forEach(n=>{
+            navigators.forEach(n => {
                 n.classList.remove('selected')
             })
             e.classList.add('selected')
 
             // guard for frequent clicks
-            if(document.getElementById('main').childElementCount > 1){
+            if (document.querySelector('main').childElementCount > 1) {
                 return;
             }
-            console.log(document.getElementById('main').childElementCount)
 
             let w = document.createElement('div');
             let f = document.createElement('iframe');
-            w.setAttribute('class','none');
-            f.setAttribute('src', e.innerHTML.replaceAll(' ', '-') + '/index.html');
+            w.setAttribute('class', 'none');
+            f.setAttribute('src', 'Pages/' + e.innerHTML.replaceAll(' ', '-') + '/page.html');
             w.appendChild(f)
-            document.querySelector("#main").appendChild(w);
+            document.querySelector("main").appendChild(w);
             innerDoc = (f.contentDocument) ? f.contentDocument : f.contentWindow.document;
             function wait_for_image_load_then(function_to_be_called) {
                 new Promise((res, rej) => {
@@ -44,22 +43,13 @@ window.addEventListener('load', () => {
 })
 
 function window_swipe() {
-    let w = document.getElementById('main').lastChild;
+    let w = document.querySelector('main').lastChild;
     w.setAttribute('class', 'windows opening_window');
     document.querySelector('.windows').setAttribute('class', 'windows closing_window')
     setTimeout(() => {
         document.querySelector('.windows.closing_window').remove();
         document.querySelector('.windows.opening_window').setAttribute('class', 'windows');
     }, 500)
-}
-
-
-// need works
-function set_margin() {
-    nw = document.getElementById("menu_wrapper");
-    margin_left = (5 * window.innerWidth / window.innerHeight + 5).toFixed(3);
-    width = (1 * window.innerWidth / window.innerHeight + 200).toFixed(3);
-    nw.setAttribute("style", "margin-left: " + margin_left + "vw; width: " + width + "px");
 }
 
 function pause_or_play_background_video() {

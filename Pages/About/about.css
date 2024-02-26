@@ -1,0 +1,10 @@
+@font-face {
+    font-family: yzwy;
+    src: url(/Fonts/yzwy.ttf);
+}
+
+* {
+    font-family: yzwy;
+    box-sizing: border-box;
+
+}
