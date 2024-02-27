@@ -3,10 +3,30 @@
     src: url(Fonts/yzwy.ttf);
 }
 
+@font-face {
+    font-family: "Font Awesome 5 Pro";
+    src: url(/Fonts/fa-solid-900.woff2);
+}
+
+
+@font-face {
+    font-family: "Font Awesome 6 Brands";
+    src: url(/Fonts/fa-brands-400.ttf);
+}
+
 body {
     font-family: yzwy;
 }
 
 * {
     box-sizing: border-box;
+}
+
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+
+    -ms-user-select: none;
+    user-select: none;
 }

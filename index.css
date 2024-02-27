@@ -33,15 +33,6 @@ iframe {
     height: 0;
 }
 
-.unselectable {
-    -moz-user-select: -moz-none;
-    -khtml-user-select: none;
-    -webkit-user-select: none;
-
-    -ms-user-select: none;
-    user-select: none;
-}
-
 /* Static Background
 body>div {
     background-color: rgb(199, 215, 215);
@@ -125,9 +116,9 @@ footer > div{
 main {
     grid-area: main;
     position: relative;
-    /* --window-mask: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0));
+    --window-mask: linear-gradient(to right, rgba(0, 0, 0, 0) 5%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 95%);
     -webkit-mask-image: var(--window-mask);
-    mask-image: var(--window-mask); */
+    mask-image: var(--window-mask);
 
 }
 

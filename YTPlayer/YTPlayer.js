@@ -116,6 +116,7 @@ window.addEventListener('load', () => {
     }, 100)
 
     setInterval(() => {
+        if(player == null) return;
         time = player.getCurrentTime();
         duration = player.getDuration();
         playTime.innerText = getTimeCodeFromNum(time) + ' / ' + getTimeCodeFromNum(duration);

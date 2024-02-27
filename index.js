@@ -18,26 +18,27 @@ window.addEventListener('load', () => {
             f.setAttribute('src', 'Pages/' + e.innerHTML.replaceAll(' ', '-') + '/page.html');
             w.appendChild(f)
             document.querySelector("main").appendChild(w);
-            innerDoc = (f.contentDocument) ? f.contentDocument : f.contentWindow.document;
-            function wait_for_image_load_then(function_to_be_called) {
-                new Promise((res, rej) => {
-                    setTimeout(() => {
-                        images = innerDoc.querySelectorAll("img");
-                        let all_complete = Array.from(images).every((img) => img.complete)
-                        if (all_complete) {
-                            res('images load finish (iframe)');
-                        }
-                        else {
-                            rej('image loading (iframe)');
-                        }
-                    }, Math.random() + 10) // necessary to make each Promise a new instance 
-                }).then(
-                    (res) => { console.log(res); function_to_be_called(); }
-                ).catch(
-                    (reason) => { console.log(reason); wait_for_image_load_then(function_to_be_called); }
-                );
-            }
-            wait_for_image_load_then(window_swipe);
+            // innerDoc = (f.contentDocument) ? f.contentDocument : f.contentWindow.document;
+            // function wait_for_image_load_then(function_to_be_called) {
+            //     new Promise((res, rej) => {
+            //         setTimeout(() => {
+            //             images = innerDoc.querySelectorAll("img");
+            //             let all_complete = Array.from(images).every((img) => img.complete)
+            //             if (all_complete) {
+            //                 res('images load finish (iframe)');
+            //             }
+            //             else {
+            //                 rej('image loading (iframe)');
+            //             }
+            //         }, Math.random() + 10) // necessary to make each Promise a new instance 
+            //     }).then(
+            //         (res) => { console.log(res); function_to_be_called(); }
+            //     ).catch(
+            //         (reason) => { console.log(reason); wait_for_image_load_then(function_to_be_called); }
+            //     );
+            // }
+            // wait_for_image_load_then(window_swipe);
+            window_swipe();
         })
     })
 })
