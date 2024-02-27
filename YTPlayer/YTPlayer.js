@@ -169,7 +169,8 @@ function onPlayerStateChange(e) {
 
 function set_player_width() {
     let w = document.getElementById('player_wrapper');
-    w.setAttribute('style', 'flex-basis: ' + (w.clientHeight * 16 / 9).toFixed(3) + 'px;');
+    // w.setAttribute('style', 'flex-basis: ' + (w.clientHeight * 16 / 9).toFixed(3) + 'px;');
+    w.setAttribute('style', 'flex-basis: ' + 0);
 }
 
 window.addEventListener('resize', () => {

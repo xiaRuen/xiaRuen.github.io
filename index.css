@@ -85,6 +85,7 @@ nav {
 
 .navigators {
     font-size: 10px;
+    line-height: 15px;
     padding: 5%;
     width: 80%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
@@ -123,6 +124,6 @@ main {
 }
 
 .windows {
-    inset: 12% 10%;
+    inset: 10% 10%;
     position: absolute;
 }

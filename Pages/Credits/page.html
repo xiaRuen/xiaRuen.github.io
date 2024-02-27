@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="credits.css">
+    <link rel="stylesheet" href="/general.css">
     <title>Credits</title>
 </head>
 
@@ -13,11 +13,7 @@
         </p>
     </div>
     <script>
-        async function loadCitation() {
-            let text = await fetch("citations.txt").then(res => { return res.text() });
-            document.querySelector("p").innerHTML = text;
-        }
-        loadCitation();
+        fetch("citations.txt").then(res => res.text()).then(res => document.querySelector("p").innerHTML = res);
     </script>
 </body>
 
